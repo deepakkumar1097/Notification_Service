@@ -21,6 +21,7 @@ db.once("open", () => {
 });
 
 require("./routes/notification.route")(app);
+require("./schedulers/email.scheduler");
 
 app.listen(7500, () => {
   console.log(`Server Started on PORT 7500`);
